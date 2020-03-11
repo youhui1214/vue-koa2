@@ -1,22 +1,26 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <!--<img alt="Vue logo" src="../assets/logo.png">-->
+        <Nav></Nav>
+        <div class="line"></div>
     </div>
 </template>
 
 <script>
 
-import HelloWorld from '@/components/HelloWorld.vue';
+import Nav from '@/components/Nav.vue';
 
 export default {
     name: 'Home',
     components: {
-        HelloWorld,
+        Nav,
     },
 };
 </script>
 
 <style lang="less">
+    .home {
+        /*margin: 0 200px;*/
+    }
 
 </style>

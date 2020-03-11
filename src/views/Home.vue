@@ -1,26 +1,56 @@
 <template>
     <div class="home">
-        <!--<img alt="Vue logo" src="../assets/logo.png">-->
-        <Nav></Nav>
-        <div class="line"></div>
+        <div class="left">
+            <div class="lt-title">数据结构与算法 相关的文章:</div>
+            <div class="lt-wrap">
+                <ArticleInfo></ArticleInfo>
+                <ArticleInfo></ArticleInfo>
+                <ArticleInfo></ArticleInfo>
+                <ArticleInfo></ArticleInfo>
+            </div>
+        </div>
+        <div class="right">
+            <ArticleAuthor></ArticleAuthor>
+        </div>
     </div>
 </template>
 
 <script>
-
-import Nav from '@/components/Nav.vue';
+import ArticleInfo from '@/components/ArticleInfo.vue';
+import ArticleAuthor from '@/components/ArticleAuthor.vue';
 
 export default {
     name: 'Home',
     components: {
-        Nav,
+        ArticleInfo,
+        ArticleAuthor,
+    },
+    data() {
+        return {
+            avatar: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+        };
     },
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
     .home {
-        /*margin: 0 200px;*/
+        margin-top: 60px;
+        display: flex;
+        .left {
+            flex: 1;
+            padding: 10px;
+            .lt-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            .lt-wrap {}
+        }
+        .right {
+            width: 400px;
+            padding: 20px;
+        }
     }
 
 </style>
